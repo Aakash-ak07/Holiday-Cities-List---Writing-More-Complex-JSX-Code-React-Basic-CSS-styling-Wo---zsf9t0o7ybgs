@@ -1,4 +1,3 @@
-
 import React, { Component, useState } from "react";
 import '../styles/App.css';
 
@@ -41,11 +40,10 @@ class App extends Component {
     return (
       <div id="main">
         <ol>
-          {this.cityList.filter((city) => city.country =="India").map ((city, index) => {
-              const key = `location${index + 1}`
-              return <li key="{key}">{city.name}</li>
-            })
-          }
+          {this.cityList.filter( (city)=>city.country=='India').map((city,index) => {
+            const key = `location ${index + 1}`
+            return <li key = {key}> {city.name} </li>;
+          })}
         </ol>
       </div>
     )
@@ -54,3 +52,4 @@ class App extends Component {
 
 
 export default App;
+
